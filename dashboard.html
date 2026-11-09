@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Nombre del sitio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="site-logo" href="index.html">Nombre del sitio</a>
+
+      <nav class="site-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="products.html">Productos</a></li>
+          <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="intro">
+      <h1>Dashboard</h1>
+      <p>Resumen de los datos del sitio. Breve descripción de lo que muestra cada gráfica.</p>
+    </section>
+
+    <!-- Filters: the change events will call Fetch in a later step. -->
+    <form class="dashboard-filters" action="" method="get" aria-label="Filtros del dashboard">
+      <div class="form-field">
+        <label for="filter-category">Categoría</label>
+        <select id="filter-category" name="category" class="form-control">
+          <option value="all">Todas las categorías</option>
+          <option value="1">Categoría 1</option>
+          <option value="2">Categoría 2</option>
+          <option value="3">Categoría 3</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="filter-period">Periodo</label>
+        <select id="filter-period" name="period" class="form-control">
+          <option value="month">Último mes</option>
+          <option value="quarter">Último trimestre</option>
+          <option value="year">Último año</option>
+        </select>
+      </div>
+    </form>
+
+    <section class="stat-grid" aria-label="Indicadores principales">
+      <article class="stat-card">
+        <p class="stat-label">Indicador 1</p>
+        <p class="stat-value">0</p>
+      </article>
+      <article class="stat-card">
+        <p class="stat-label">Indicador 2</p>
+        <p class="stat-value">0</p>
+      </article>
+      <article class="stat-card">
+        <p class="stat-label">Indicador 3</p>
+        <p class="stat-value">0</p>
+      </article>
+    </section>
+
+    <div class="chart-grid">
+      <section class="chart-card" aria-labelledby="chart-1-title">
+        <h2 id="chart-1-title">Gráfica 1: título de la visualización</h2>
+        <p class="chart-card__description">Descripción breve de lo que muestra esta gráfica.</p>
+        <div id="chart-1" class="chart-container">
+          <p class="chart-placeholder">Espacio para la gráfica 1 (Highcharts)</p>
+        </div>
+      </section>
+
+      <section class="chart-card" aria-labelledby="chart-2-title">
+        <h2 id="chart-2-title">Gráfica 2: título de la visualización</h2>
+        <p class="chart-card__description">Descripción breve de lo que muestra esta gráfica.</p>
+        <div id="chart-2" class="chart-container">
+          <p class="chart-placeholder">Espacio para la gráfica 2 (Highcharts)</p>
+        </div>
+      </section>
+
+      <section class="chart-card chart-card--wide" aria-labelledby="chart-3-title">
+        <h2 id="chart-3-title">Gráfica 3: título de la visualización</h2>
+        <p class="chart-card__description">Descripción breve de lo que muestra esta gráfica.</p>
+        <div id="chart-3" class="chart-container">
+          <p class="chart-placeholder">Espacio para la gráfica 3 (Highcharts)</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Nombre del sitio. Todos los derechos reservados.</p>
+      <p>Texto del pie de página</p>
+    </div>
+  </footer>
+
+  <!-- Highcharts, the Fetch script and the PHP endpoints will be added in the next step. -->
+</body>
+</html>

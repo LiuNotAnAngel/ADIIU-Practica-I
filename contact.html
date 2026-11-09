@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Nombre del sitio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="site-logo" href="index.html">Nombre del sitio</a>
+
+      <nav class="site-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="products.html">Productos</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="contact.html" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="intro">
+      <h1>Contacto</h1>
+      <p>Escribe tu consulta y te responderemos en el menor tiempo posible.</p>
+    </section>
+
+    <section class="two-column">
+      <div>
+        <h2>Datos de contacto</h2>
+        <p>Dirección: Calle Ejemplo 123, 00000 Ciudad</p>
+        <p>Correo: <a href="mailto:info@ejemplo.com">info@ejemplo.com</a></p>
+        <p>Teléfono: +34 000 000 000</p>
+        <p>Horario: lunes a viernes, 9:00 a 18:00</p>
+      </div>
+
+      <div>
+        <h2>Formulario de contacto</h2>
+
+        <!-- The action will point to a PHP script in a later step. -->
+        <form class="form" action="" method="post">
+          <div class="form-field">
+            <label for="contact-name">Nombre</label>
+            <input id="contact-name" name="name" type="text" class="form-control" autocomplete="name" required>
+          </div>
+
+          <div class="form-field">
+            <label for="contact-email">Correo electrónico</label>
+            <input id="contact-email" name="email" type="email" class="form-control" autocomplete="email" required>
+          </div>
+
+          <div class="form-field">
+            <label for="contact-subject">Asunto</label>
+            <select id="contact-subject" name="subject" class="form-control">
+              <option value="">Selecciona una opción</option>
+              <option value="general">Consulta general</option>
+              <option value="support">Soporte</option>
+              <option value="other">Otro</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="contact-message">Mensaje</label>
+            <textarea id="contact-message" name="message" class="form-control" rows="6" required></textarea>
+          </div>
+
+          <button type="submit" class="button">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Nombre del sitio. Todos los derechos reservados.</p>
+      <p>Texto del pie de página</p>
+    </div>
+  </footer>
+</body>
+</html>
