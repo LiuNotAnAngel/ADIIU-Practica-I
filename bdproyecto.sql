@@ -1,3 +1,11 @@
+
+
+
+CREATE DATABASE COCHES_PROYECTO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+
+
+
 -- Selecciona la base de datos del proyecto en phpMyAdmin antes de importar.
 -- Guarda las matrículas sin espacios ni guiones.
 CREATE TABLE coches (
