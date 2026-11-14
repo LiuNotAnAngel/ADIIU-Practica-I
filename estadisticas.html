@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estadísticas | Coches de ocasión</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="site-logo" href="index.html">Coches de ocasión</a>
+
+      <nav class="site-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="estadisticas.html" class="actual" aria-label="Estadísticas, página actual">Estadísticas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="intro">
+      <h1>Estadísticas</h1>
+      <p>Ventas, precios y disponibilidad de los coches. Las visualizaciones están pendientes de conectar con la base de datos.</p>
+    </section>
+
+    <!-- Añadir aquí el selector de marca que actualizará las ventas por mes mediante Fetch y PHP. -->
+
+    <section class="stat-grid" aria-label="Indicadores principales">
+      <article class="stat-card">
+        <p class="stat-label">Coches anunciados</p>
+        <p class="stat-value">—</p>
+      </article>
+      <article class="stat-card">
+        <p class="stat-label">Disponibles</p>
+        <p class="stat-value">—</p>
+      </article>
+      <article class="stat-card">
+        <p class="stat-label">Vendidos</p>
+        <p class="stat-value">—</p>
+      </article>
+    </section>
+
+    <div class="chart-grid">
+      <section class="chart-card" aria-labelledby="chart-1-title">
+        <h2 id="chart-1-title">Ventas por mes</h2>
+        <p class="chart-card__description">Número de coches vendidos cada mes para la marca seleccionada.</p>
+        <div id="ventas-por-mes" class="chart-container">
+          <p class="chart-placeholder">Gráfico pendiente</p>
+        </div>
+      </section>
+
+      <section class="chart-card" aria-labelledby="chart-2-title">
+        <h2 id="chart-2-title">Precio medio por marca</h2>
+        <p class="chart-card__description">Precio anunciado medio en euros para cada marca.</p>
+        <div id="precio-por-marca" class="chart-container">
+          <p class="chart-placeholder">Gráfico pendiente</p>
+        </div>
+      </section>
+
+      <section class="chart-card chart-card--wide" aria-labelledby="chart-3-title">
+        <h2 id="chart-3-title">Disponibilidad del catálogo</h2>
+        <p class="chart-card__description">Número de coches disponibles y vendidos.</p>
+        <div id="disponibilidad" class="chart-container">
+          <p class="chart-placeholder">Gráfico pendiente</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Coches de ocasión</p>
+      <p>Práctica de Aplicaciones Web</p>
+    </div>
+  </footer>
+
+  <!-- Conectar los tres gráficos con Highcharts y su módulo de accesibilidad. -->
+</body>
+</html>

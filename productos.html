@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos | Coches de ocasión</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="site-logo" href="index.html">Coches de ocasión</a>
+
+      <nav class="site-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html" class="actual" aria-label="Productos, página actual">Productos</a></li>
+          <li><a href="estadisticas.html">Estadísticas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="intro">
+      <h1>Catálogo de coches</h1>
+      <p>Elige una marca para consultar sus modelos de segunda mano.</p>
+    </section>
+
+    <section aria-labelledby="catalog-title">
+      <div class="section-heading">
+        <h2 id="catalog-title">Vehículos disponibles</h2>
+      </div>
+
+      <form class="form">
+        <div class="form-field">
+          <label for="marca-catalogo">Marca</label>
+          <select id="marca-catalogo" name="marca" class="form-control">
+            <option value="">Todas las marcas</option>
+            <option>SEAT</option>
+            <option>Toyota</option>
+            <option>Renault</option>
+            <option>Volkswagen</option>
+          </select>
+        </div>
+      </form>
+      <p id="estado-catalogo"></p>
+      <ul class="card-grid" id="lista-coches"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Coches de ocasión</p>
+      <p>Práctica de Aplicaciones Web</p>
+    </div>
+  </footer>
+  <script src="catalogo.js"></script>
+</body>
+</html>
