@@ -6,22 +6,10 @@
   <title>Estadísticas | Coches de ocasión</title>
   <link rel="stylesheet" href="estilos.css">
 </head>
-<body>
+<body id="estadisticas">
   <a class="skip-link" href="#main-content">Saltar al contenido</a>
 
-  <header class="site-header">
-    <div class="container">
-      <a class="site-logo" href="index.html">Coches de ocasión</a>
-
-      <nav class="site-nav" aria-label="Navegación principal">
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="productos.html">Productos</a></li>
-          <li><a href="estadisticas.html" class="actual" aria-label="Estadísticas, página actual">Estadísticas</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div id="cabecera"></div>
 
   <main id="main-content" class="container">
     <section class="intro">
@@ -73,13 +61,9 @@
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 Coches de ocasión</p>
-      <p>Práctica de Aplicaciones Web</p>
-    </div>
-  </footer>
+  <div id="pie"></div>
 
   <!-- Conectar los tres gráficos con Highcharts y su módulo de accesibilidad. -->
+  <script src="componentes.js"></script>
 </body>
 </html>

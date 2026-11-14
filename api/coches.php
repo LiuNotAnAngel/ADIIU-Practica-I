@@ -12,7 +12,7 @@ $db = new mysqli('127.0.0.1', 'root', '', 'bdproyecto');
 $db->set_charset('utf8mb4');
 
 $columnas = 'marca, modelo, ano_matriculacion, kilometraje_km, combustible,
-             tipo_cambio, precio_anunciado, estado_anuncio';
+             tipo_cambio, precio_anunciado, estado_anuncio, ruta_foto';
 if ($marca === null || $marca === '') {
     $valor = 'disponible';
     $consulta = $db->prepare('SELECT ' . $columnas . ' FROM coches WHERE estado_anuncio = ?');

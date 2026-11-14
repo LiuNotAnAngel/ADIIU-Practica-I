@@ -21,6 +21,12 @@ function crearFicha(coche) {
   const precio = document.createElement('p');
   precio.setAttribute('class', 'price');
   precio.textContent = coche.precio_anunciado + ' €';
+  if (coche.ruta_foto) {
+    const foto = document.createElement('img');
+    foto.setAttribute('src', coche.ruta_foto);
+    foto.setAttribute('alt', 'Fotografía de referencia del ' + coche.marca + ' ' + coche.modelo);
+    ficha.appendChild(foto);
+  }
   ficha.appendChild(titulo);
   ficha.appendChild(recorrido);
   ficha.appendChild(motor);
