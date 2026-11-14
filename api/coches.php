@@ -8,7 +8,7 @@ if ($marca === false) {
     exit;
 }
 
-$db = new mysqli('127.0.0.1', 'root', '', 'bdproyecto');
+$db = new mysqli('127.0.0.1', 'root', '', 'coches_proyecto');
 $db->set_charset('utf8mb4');
 
 $columnas = 'marca, modelo, ano_matriculacion, kilometraje_km, combustible,

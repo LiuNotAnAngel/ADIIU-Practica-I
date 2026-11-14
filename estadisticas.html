@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Estadísticas | Coches de ocasión</title>
   <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body id="estadisticas">
   <a class="skip-link" href="#main-content">Saltar al contenido</a>
 
@@ -14,23 +16,29 @@
   <main id="main-content" class="container">
     <section class="intro">
       <h1>Estadísticas</h1>
-      <p>Ventas, precios y disponibilidad de los coches. Las visualizaciones están pendientes de conectar con la base de datos.</p>
+      <p>Ventas, precios y disponibilidad de los coches. Las visualizaciones están pendientes de conectar con la base de
+        datos.</p>
     </section>
 
-    <!-- Añadir aquí el selector de marca que actualizará las ventas por mes mediante Fetch y PHP. -->
+    <div class="filtro">
+      <label for="selector-marca">Marca:</label>
+      <select id="selector-marca"></select>
+    </div>
+
+
 
     <section class="stat-grid" aria-label="Indicadores principales">
       <article class="stat-card">
         <p class="stat-label">Coches anunciados</p>
-        <p class="stat-value">—</p>
+        <p class="stat-value" id="total-coches">—</p>
       </article>
       <article class="stat-card">
         <p class="stat-label">Disponibles</p>
-        <p class="stat-value">—</p>
+        <p class="stat-value" id="total-disponibles">—</p>
       </article>
       <article class="stat-card">
         <p class="stat-label">Vendidos</p>
-        <p class="stat-value">—</p>
+        <p class="stat-value" id="total-vendidos">—</p>
       </article>
     </section>
 
@@ -64,6 +72,11 @@
   <div id="pie"></div>
 
   <!-- Conectar los tres gráficos con Highcharts y su módulo de accesibilidad. -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
   <script src="componentes.js"></script>
+  <script src="estadisticas.js"></script>
 </body>
+
 </html>
