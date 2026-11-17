@@ -23,7 +23,7 @@ async function cargarCabecera() {
   const menuCargado = await insertarComponente('navbar', '#menu');
   if (!menuCargado) return;
 
-  const pagina = document.body.id + '.html';
+  const pagina = document.body.getAttribute('id') + '.html';
   const enlace = document.querySelector('#menu a[href="' + pagina + '"]');
   if (enlace) {
     enlace.setAttribute('class', 'actual');

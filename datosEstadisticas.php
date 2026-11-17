@@ -4,13 +4,13 @@ header('Content-Type: application/json; charset=utf-8');
 $db = new mysqli('localhost', 'root', '', 'COCHES_PROYECTO');
 $db->set_charset('utf8mb4');
 
-$tipo = filter_input(INPUT_GET, 'tipo', FILTER_UNSAFE_RAW) ?? '';
+$tipo  = trim($_GET['tipo']  ?? '');
 
 switch ($tipo) {
 
     // Ventas por mes para una marca
     case 'ventas_mes':
-        $marca = filter_input(INPUT_GET, 'marca', FILTER_UNSAFE_RAW) ?? '';
+        $marca = trim($_GET['marca'] ?? '');
         $stmt = $db->prepare(
             "SELECT DATE_FORMAT(v.fecha_venta, '%Y-%m') AS mes, COUNT(*) AS total
              FROM ventas v

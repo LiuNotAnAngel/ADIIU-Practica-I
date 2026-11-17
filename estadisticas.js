@@ -1,16 +1,20 @@
 const API = 'datosEstadisticas.php';
 
-// Helper para llamar al endpoint
-async function obtenerDatos(params) {
-  const url = API + '?' + new URLSearchParams(params);
+// Para llamar al endpoint
+async function obtenerDatos(tipo, marca) {
+  let url = API + '?tipo=' + encodeURIComponent(tipo);
+  if (marca !== undefined) {
+    url += '&marca=' + encodeURIComponent(marca);
+  }
   const respuesta = await fetch(url);
   if (!respuesta.ok) throw new Error('HTTP ' + respuesta.status);
   return respuesta.json();
 }
 
+
 // 1. Ventas por mes (columnas), filtrado por marca
 async function dibujarVentasPorMes(marca) {
-  const datos = await obtenerDatos({ tipo: 'ventas_mes', marca });
+  const datos = await obtenerDatos('ventas_mes', marca);
 
   Highcharts.chart('ventas-por-mes', {
     chart: { type: 'column' },
@@ -24,7 +28,7 @@ async function dibujarVentasPorMes(marca) {
 
 // 2. Precio medio por marca (barras horizontales)
 async function dibujarPrecioPorMarca() {
-  const datos = await obtenerDatos({ tipo: 'precio_marca' });
+  const datos = await obtenerDatos('precio_marca')
 
   Highcharts.chart('precio-por-marca', {
     chart: { type: 'bar' },
@@ -42,8 +46,7 @@ async function dibujarPrecioPorMarca() {
 
 // 3. Disponibilidad (donut)
 async function dibujarDisponibilidad() {
-  const datos = await obtenerDatos({ tipo: 'disponibilidad' });
-
+  const datos = await obtenerDatos('disponibilidad');
   Highcharts.chart('disponibilidad', {
     chart: { type: 'pie' },
     title: { text: 'Disponibilidad del catálogo' },
@@ -63,7 +66,7 @@ async function dibujarDisponibilidad() {
 
 // Indicadores principales
 async function cargarResumen() {
-  const datos = await obtenerDatos({ tipo: 'resumen' });
+  const datos = await obtenerDatos('resumen');
 
   document.getElementById('total-coches').textContent = datos.total;
   document.getElementById('total-disponibles').textContent = datos.disponibles;
@@ -72,12 +75,16 @@ async function cargarResumen() {
 
 // Selector de marca
 async function cargarSelectorMarcas() {
-  const marcas = await obtenerDatos({ tipo: 'marcas' });
+  const marcas = await obtenerDatos('marcas');
   const selector = document.getElementById('selector-marca');
 
-  for (const { marca } of marcas) {
-    selector.add(new Option(marca, marca));
-  }
+for (const fila of marcas) {
+  const opcion = document.createElement('option');
+  opcion.setAttribute('value', fila.marca);
+  opcion.textContent = fila.marca;
+  selector.appendChild(opcion);
+}
+
 
   selector.addEventListener('change', () => dibujarVentasPorMes(selector.value));
 
