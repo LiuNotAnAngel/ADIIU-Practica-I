@@ -78,12 +78,12 @@ async function cargarSelectorMarcas() {
   const marcas = await obtenerDatos('marcas');
   const selector = document.getElementById('selector-marca');
 
-for (const fila of marcas) {
-  const opcion = document.createElement('option');
-  opcion.setAttribute('value', fila.marca);
-  opcion.textContent = fila.marca;
-  selector.appendChild(opcion);
-}
+  for (const fila of marcas) {
+    const opcion = document.createElement('option');
+    opcion.setAttribute('value', fila.marca);
+    opcion.textContent = fila.marca;
+    selector.appendChild(opcion);
+  }
 
 
   selector.addEventListener('change', () => dibujarVentasPorMes(selector.value));
@@ -96,9 +96,9 @@ for (const fila of marcas) {
 
 // Arranque
 document.addEventListener('DOMContentLoaded', () => {
-  cargarSelectorMarcas().catch(e => console.error('Selector:', e));
-  dibujarPrecioPorMarca().catch(e => console.error('Precio:', e));
-  dibujarDisponibilidad().catch(e => console.error('Disponibilidad:', e));
-  cargarResumen().catch(e => console.error('Resumen:', e));
+  cargarSelectorMarcas().catch(e => console.error('Selector:', e.message));
+  dibujarPrecioPorMarca().catch(e => console.error('Precio:', e.message));
+  dibujarDisponibilidad().catch(e => console.error('Disponibilidad:', e.message));
+  cargarResumen().catch(e => console.error('Resumen:', e.message));
 });
 
