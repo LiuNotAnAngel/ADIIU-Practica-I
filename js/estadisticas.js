@@ -1,4 +1,4 @@
-const API = 'datosEstadisticas.php';
+const API = 'api/estadisticas.php';
 
 // Para llamar al endpoint
 async function obtenerDatos(tipo, marca) {
