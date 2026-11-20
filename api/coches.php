@@ -11,24 +11,21 @@ if ($marca === false) {
 $db = new mysqli('127.0.0.1', 'root', '', 'coches_proyecto');
 $db->set_charset('utf8mb4');
 
-$columnas = 'marca, modelo, ano_matriculacion, kilometraje_km, combustible,
+$columnas = 'matricula, marca, modelo, ano_matriculacion, kilometraje_km, combustible,
              tipo_cambio, precio_anunciado, estado_anuncio, ruta_foto';
 if ($marca === null || $marca === '') {
     $valor = 'disponible';
     $consulta = $db->prepare('SELECT ' . $columnas . ' FROM coches WHERE estado_anuncio = ?');
+    $consulta->bind_param('s', $valor);
+
 } else {
-    $valor = $marca;
-    $consulta = $db->prepare('SELECT ' . $columnas . ' FROM coches WHERE marca = ?');
+    $consulta = $db->prepare('SELECT ' . $columnas .
+        ' FROM coches WHERE marca = ? AND estado_anuncio = ?');
+    $disponible = 'disponible';
+    $consulta->bind_param('ss', $marca, $disponible);
 }
-$consulta->bind_param('s', $valor);
 $consulta->execute();
 $coches = $consulta->get_result()->fetch_all(MYSQLI_ASSOC);
 
-// Una marca puede tener coches vendidos. El catálogo solo muestra los disponibles.
-$disponibles = array();
-foreach ($coches as $coche) {
-    if ($coche['estado_anuncio'] === 'disponible') {
-        $disponibles[count($disponibles)] = $coche;
-    }
-}
-echo json_encode($disponibles);
+
+echo json_encode($coches);

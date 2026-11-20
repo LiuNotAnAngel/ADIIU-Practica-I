@@ -18,6 +18,11 @@ function crearFicha(coche) {
   const motor = document.createElement('p');
   motor.textContent = coche.combustible + ' · ' + coche.tipo_cambio;
 
+  const referencia = document.createElement('p');
+  referencia.setAttribute('class', 'matricula');
+  referencia.textContent = 'Matrícula: ' + coche.matricula;
+
+
   const precio = document.createElement('p');
   precio.setAttribute('class', 'price');
   precio.textContent = coche.precio_anunciado + ' €';
@@ -30,6 +35,7 @@ function crearFicha(coche) {
   ficha.appendChild(titulo);
   ficha.appendChild(recorrido);
   ficha.appendChild(motor);
+  ficha.appendChild(referencia);
   ficha.appendChild(precio);
   elemento.appendChild(ficha);
   return elemento;
