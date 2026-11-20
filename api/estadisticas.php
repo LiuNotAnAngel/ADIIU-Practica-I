@@ -7,6 +7,27 @@ $db->set_charset('utf8mb4');
 $tipo  = trim($_GET['tipo']  ?? '');
 
 switch ($tipo) {
+    // Coches disponibles agrupados por año de matriculación
+    case 'disponibles_ano':
+        $res = $db->query(
+            "SELECT ano_matriculacion AS ano, COUNT(*) AS total
+             FROM coches
+             WHERE estado_anuncio = 'disponible'
+             GROUP BY ano_matriculacion
+             ORDER BY ano_matriculacion"
+        );
+        echo json_encode($res->fetch_all(MYSQLI_ASSOC));
+        break;
+
+    // Precio de cada coche disponible (los rangos se calculan en JS)
+    case 'precios_disponibles':
+        $res = $db->query(
+            "SELECT precio_anunciado
+             FROM coches
+             WHERE estado_anuncio = 'disponible'"
+        );
+        echo json_encode($res->fetch_all(MYSQLI_ASSOC));
+        break;
 
     // Ventas por mes para una marca
     case 'ventas_mes':

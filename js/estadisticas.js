@@ -1,4 +1,9 @@
 const API = 'api/estadisticas.php';
+// Paleta Okabe-Ito: distinguible con los tipos de daltonismo más comunes
+Highcharts.setOptions({
+  colors: ['#0072B2', '#E69F00', '#009E73', '#CC79A7',
+           '#56B4E9', '#D55E00', '#F0E442', '#000000']
+});
 
 // Para llamar al endpoint
 async function obtenerDatos(tipo, marca) {
@@ -64,6 +69,51 @@ async function dibujarDisponibilidad() {
 }
 
 
+// 4. Coches disponibles por año de matriculación (columnas)
+async function dibujarDisponiblesPorAno() {
+  const datos = await obtenerDatos('disponibles_ano');
+
+  Highcharts.chart('disponibles-ano', {
+    chart: { type: 'column' },
+    title: { text: 'Coches disponibles por año' },
+    xAxis: { categories: datos.map(d => String(d.ano)), title: { text: 'Año de matriculación' } },
+    yAxis: { title: { text: 'Coches' }, allowDecimals: false, min: 0 },
+    legend: { enabled: false },
+    plotOptions: { column: { dataLabels: { enabled: true } } },
+    series: [{ name: 'Disponibles', data: datos.map(d => Number(d.total)) }]
+  });
+}
+
+
+
+// 5. Coches disponibles por rango de precio (columnas)
+async function dibujarRangosPrecio() {
+  const datos = await obtenerDatos('precios_disponibles');
+  const rangos = ['< 10.000 €', '10.000–15.000 €', '15.000–20.000 €', '20.000–25.000 €', '> 25.000 €'];
+  const cuenta = [0, 0, 0, 0, 0];
+
+  for (const fila of datos) {
+    const precio = Number(fila.precio_anunciado);
+    if (precio < 10000) cuenta[0]++;
+    else if (precio < 15000) cuenta[1]++;
+    else if (precio < 20000) cuenta[2]++;
+    else if (precio < 25000) cuenta[3]++;
+    else cuenta[4]++;
+  }
+
+  Highcharts.chart('rangos-precio', {
+    chart: { type: 'column' },
+    title: { text: 'Coches disponibles por presupuesto' },
+    xAxis: { categories: rangos, title: { text: 'Precio' } },
+    yAxis: { title: { text: 'Coches' }, allowDecimals: false, min: 0 },
+    legend: { enabled: false },
+    plotOptions: { column: { dataLabels: { enabled: true } } },
+    series: [{ name: 'Disponibles', data: cuenta }]
+  });
+}
+
+
+
 // Indicadores principales
 async function cargarResumen() {
   const datos = await obtenerDatos('resumen');
@@ -99,6 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
   cargarSelectorMarcas().catch(e => console.error('Selector:', e.message));
   dibujarPrecioPorMarca().catch(e => console.error('Precio:', e.message));
   dibujarDisponibilidad().catch(e => console.error('Disponibilidad:', e.message));
+  dibujarDisponiblesPorAno().catch(e => console.error('Por año:', e.message));
+  dibujarRangosPrecio().catch(e => console.error('Rangos:', e.message));
   cargarResumen().catch(e => console.error('Resumen:', e.message));
 });
 
