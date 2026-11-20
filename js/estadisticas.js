@@ -62,7 +62,8 @@ async function dibujarDisponibilidad() {
       name: 'Coches',
       data: datos.map(d => ({
         name: d.estado === 'disponible' ? 'Disponibles' : 'Vendidos',
-        y: Number(d.total)
+        y: Number(d.total),
+        color: d.estado === 'disponible' ? '#0072B2' : '#E69F00'
       }))
     }]
   });
