@@ -95,7 +95,7 @@ INSERT INTO coches (
     (48, '7580MLG', 'Ford', 'Focus', 2018, 117400, 'diésel', 'manual', 10100.00, 'vendido', '2026-08-16', 'img/coches/ford-focus.jpg'),
     (49, '6878MRK', 'Kia', 'Sportage', 2022, 57600, 'gasolina', 'manual', 25200.00, 'vendido', '2026-03-26', 'img/coches/kia-sportage.jpg'),
     (50, '4822KVY', 'Hyundai', 'Tucson', 2018, 103200, 'diésel', 'manual', 17000.00, 'vendido', '2026-04-11', 'img/coches/hyundai-tucson.jpg'),
-    (51, '7864MPZ', 'Tesla', 'Model 3', 2017, 109700, 'eléctrico', 'automático', 17900.00, 'disponible', '2026-11-12', 'img/coches/tesla-model3.jpg'),
+    (51, '7864MPZ', 'Tesla', 'Model 3', 2019, 109700, 'eléctrico', 'automático', 17900.00, 'disponible', '2026-11-12', 'img/coches/tesla-model3.jpg'),
     (52, '3056MWZ', 'Dacia', 'Sandero', 2019, 131600, 'gasolina', 'manual', 7800.00, 'disponible', '2026-09-07', 'img/coches/dacia-sandero.jpg'),
     (53, '7428LRR', 'Fiat', '500', 2020, 110200, 'híbrido', 'manual', 9100.00, 'vendido', '2026-03-02', 'img/coches/fiat-500.jpg'),
     (54, '4122KJT', 'BMW', 'Serie 1', 2020, 69000, 'gasolina', 'automático', 19900.00, 'vendido', '2026-04-01', 'img/coches/bmw-serie1.jpg'),
@@ -104,7 +104,39 @@ INSERT INTO coches (
     (57, '5132LZP', 'Nissan', 'Qashqai', 2018, 129500, 'gasolina', 'manual', 14400.00, 'vendido', '2026-09-07', 'img/coches/nissan-qashqai.jpg'),
     (58, '8634LVM', 'Audi', 'A3 Sportback', 2023, 44900, 'gasolina', 'automático', 27800.00, 'vendido', '2026-02-20', 'img/coches/audi-a3.jpg'),
     (59, '5337LHW', 'Cupra', 'Formentor', 2022, 55200, 'híbrido', 'automático', 33400.00, 'disponible', '2026-09-03', 'img/coches/cupra-formentor.jpg'),
-    (60, '9654LGX', 'Volkswagen', 'ID.3', 2018, 150300, 'eléctrico', 'automático', 15400.00, 'vendido', '2026-01-21', 'img/coches/volkswagen-id3.jpg');
+    (60, '9654LGX', 'Volkswagen', 'ID.3', 2020, 150300, 'eléctrico', 'automático', 15400.00, 'vendido', '2026-01-21', 'img/coches/volkswagen-id3.jpg'),
+    (61, '3475MHC', 'SEAT', 'Ibiza', 2023, 53800, 'gasolina', 'manual', 10100.00, 'vendido', '2026-09-02', 'img/coches/seat-ibiza.jpg'),
+    (62, '2162LFX', 'SEAT', 'León', 2021, 67000, 'gasolina', 'manual', 10300.00, 'vendido', '2026-09-05', 'img/coches/seat-leon.jpg'),
+    (63, '6590LGX', 'SEAT', 'Arona', 2021, 66400, 'gasolina', 'manual', 9100.00, 'vendido', '2026-08-02', 'img/coches/seat-arona.jpg'),
+    (64, '7320MNV', 'Toyota', 'Corolla', 2022, 72800, 'híbrido', 'automático', 13900.00, 'vendido', '2026-07-21', 'img/coches/toyota-corolla.jpg'),
+    (65, '9126LBV', 'Toyota', 'Yaris', 2020, 75600, 'híbrido', 'automático', 8100.00, 'disponible', '2026-09-23', 'img/coches/toyota-yaris.jpg'),
+    (66, '9555MKY', 'Toyota', 'RAV4', 2023, 59400, 'híbrido', 'automático', 22400.00, 'vendido', '2026-06-17', 'img/coches/toyota-rav4.jpg'),
+    (67, '3786KPN', 'Renault', 'Clio', 2019, 90700, 'diésel', 'manual', 5600.00, 'vendido', '2026-07-01', 'img/coches/renault-clio.jpg'),
+    (68, '3763LDH', 'Renault', 'Zoe', 2020, 70100, 'eléctrico', 'automático', 11100.00, 'vendido', '2026-08-12', 'img/coches/renault-zoe.jpg'),
+    (69, '4957JSH', 'Renault', 'Captur', 2017, 166600, 'diésel', 'manual', 4500.00, 'disponible', '2026-09-16', 'img/coches/renault-captur.jpg'),
+    (70, '9292MRK', 'Volkswagen', 'Golf', 2022, 72100, 'diésel', 'automático', 14400.00, 'vendido', '2026-05-10', 'img/coches/volkswagen-golf.jpg'),
+    (71, '7675KVC', 'Volkswagen', 'Polo', 2018, 137500, 'gasolina', 'automático', 5000.00, 'vendido', '2026-06-01', 'img/coches/volkswagen-polo.jpg'),
+    (72, '1569MSK', 'Volkswagen', 'ID.3', 2022, 58900, 'eléctrico', 'automático', 19300.00, 'vendido', '2026-04-02', 'img/coches/volkswagen-id3.jpg'),
+    (73, '3477MVC', 'Peugeot', '208', 2022, 49500, 'gasolina', 'automático', 10300.00, 'disponible', '2026-10-17', 'img/coches/peugeot-208.jpg'),
+    (74, '8849KBJ', 'Peugeot', '3008', 2019, 130200, 'gasolina', 'automático', 9300.00, 'vendido', '2026-07-11', 'img/coches/peugeot-3008.jpg'),
+    (75, '8937MYV', 'Ford', 'Focus', 2023, 50900, 'gasolina', 'manual', 13700.00, 'vendido', '2026-06-11', 'img/coches/ford-focus.jpg'),
+    (76, '3282NBR', 'Ford', 'Kuga', 2024, 29000, 'diésel', 'manual', 21400.00, 'vendido', '2026-03-10', 'img/coches/ford-kuga.jpg'),
+    (77, '6343MKY', 'Kia', 'Niro EV', 2023, 59100, 'eléctrico', 'automático', 23600.00, 'vendido', '2026-08-08', 'img/coches/kia-niro.jpg'),
+    (78, '3187LGF', 'Hyundai', 'Kona', 2021, 61300, 'gasolina', 'manual', 9600.00, 'vendido', '2026-07-27', 'img/coches/hyundai-kona.jpg'),
+    (79, '3307LDF', 'Hyundai', 'Tucson', 2021, 86600, 'híbrido', 'automático', 14300.00, 'disponible', '2026-10-21', 'img/coches/hyundai-tucson.jpg'),
+    (80, '9825LNR', 'Tesla', 'Model 3', 2020, 89800, 'eléctrico', 'automático', 16200.00, 'disponible', '2026-11-17', 'img/coches/tesla-model3.jpg'),
+    (81, '3974MHR', 'Dacia', 'Sandero', 2022, 50800, 'otros', 'manual', 7200.00, 'vendido', '2026-04-18', 'img/coches/dacia-sandero.jpg'),
+    (82, '9271JCB', 'Fiat', '500', 2017, 179000, 'gasolina', 'manual', 3000.00, 'disponible', '2026-11-03', 'img/coches/fiat-500.jpg'),
+    (83, '7519MYH', 'BMW', 'Serie 1', 2022, 44100, 'diésel', 'automático', 17100.00, 'vendido', '2026-05-04', 'img/coches/bmw-serie1.jpg'),
+    (84, '1686NKR', 'Opel', 'Astra', 2024, 30200, 'gasolina', 'manual', 18500.00, 'disponible', '2026-10-04', 'img/coches/opel-astra.jpg'),
+    (85, '9243LXV', 'Citroën', 'C3', 2021, 74100, 'gasolina', 'manual', 6800.00, 'vendido', '2026-02-24', 'img/coches/citroen-c3.jpg'),
+    (86, '6307LWM', 'Citroën', 'C4', 2021, 91600, 'gasolina', 'manual', 10000.00, 'vendido', '2026-06-03', 'img/coches/citroen-c4.jpg'),
+    (87, '4105NDZ', 'Škoda', 'Fabia', 2024, 38300, 'gasolina', 'manual', 12700.00, 'vendido', '2026-06-20', 'img/coches/skoda-fabia.jpg'),
+    (88, '7885LFD', 'Nissan', 'Qashqai', 2021, 76000, 'híbrido', 'automático', 13600.00, 'vendido', '2026-02-11', 'img/coches/nissan-qashqai.jpg'),
+    (89, '1324NTV', 'Mazda', 'CX-5', 2024, 36500, 'diésel', 'manual', 23300.00, 'vendido', '2026-09-26', 'img/coches/mazda-cx5.jpg'),
+    (90, '4694MBC', 'Mercedes-Benz', 'Clase A Sedán', 2022, 44600, 'diésel', 'automático', 18600.00, 'vendido', '2026-08-15', 'img/coches/mercedes-clase-a.jpg'),
+    (91, '7628MST', 'MG', 'ZS EV', 2023, 58900, 'eléctrico', 'automático', 18900.00, 'vendido', '2026-05-06', 'img/coches/mg-zs-ev.jpg'),
+    (92, '4732MDC', 'Kia', 'Sportage', 2023, 53900, 'diésel', 'manual', 19000.00, 'disponible', '2026-11-15', 'img/coches/kia-sportage.jpg');
 
 INSERT INTO clientes (
     id_cliente, dni, nombre, apellidos, genero, correo_electronico, telefono
@@ -188,7 +220,49 @@ INSERT INTO clientes (
     'oscar.prats@example.com', '+34681483341'),
 
 (27, '00000027G', 'Irene', 'Tous Caldentey', 'mujer',
-    'irene.tous@example.com', '+34682687908');
+    'irene.tous@example.com', '+34682687908'),
+
+(28, '00000028M', 'Bernat', 'Font Cladera', 'hombre',
+    'bernat.font@example.com', '+34633199223'),
+
+(29, '00000029Y', 'Sofía', 'Mora Esteva', 'mujer',
+    'sofia.mora@example.com', '+34676019675'),
+
+(30, '00000030F', 'Arnau', 'Roca Pascual', 'hombre',
+    'arnau.roca@example.com', '+34660066929'),
+
+(31, '00000031P', 'Alba', 'Vila Siquier', 'mujer',
+    'alba.vila@example.com', NULL),
+
+(32, '00000032D', 'Daniel', 'Ortega Massanet', 'hombre',
+    'daniel.ortega@example.com', '+34691146825'),
+
+(33, '00000033X', 'Marina', 'Bonet Florit', 'mujer',
+    'marina.bonet@example.com', '+34638978467'),
+
+(34, '00000034B', 'Rubén', 'Castro Albertí', 'hombre',
+    'ruben.castro@example.com', '+34670363114'),
+
+(35, '00000035N', 'Cris', 'Riera Sbert', 'prefiero no decirlo',
+    'cris.riera@example.com', '+34694128697'),
+
+(36, '00000036J', 'Nuria', 'Vallespir Coll', 'mujer',
+    'nuria.vallespir@example.com', '+34694905819'),
+
+(37, '00000037Z', 'Jaume', 'Llompart Fiol', 'hombre',
+    'jaume.llompart@example.com', '+34693150370'),
+
+(38, '00000038S', 'Eva', 'Domínguez Sureda', 'mujer',
+    'eva.dominguez@example.com', NULL),
+
+(39, '00000039Q', 'Marc', 'Juan Bover', 'hombre',
+    'marc.juan@example.com', '+34699661292'),
+
+(40, '00000040V', 'Carla', 'Morey Tugores', 'mujer',
+    'carla.morey@example.com', '+34691281085'),
+
+(41, '00000041H', 'Álvaro', 'Herrera Gual', 'hombre',
+    'alvaro.herrera@example.com', '+34645190862');
 
 INSERT INTO ventas (id_coche, id_cliente, fecha_venta, precio_final) VALUES
     (2,  1, '2026-08-12', 14900.00),
@@ -222,5 +296,29 @@ INSERT INTO ventas (id_coche, id_cliente, fecha_venta, precio_final) VALUES
     (47, 1, '2026-09-02', 15500.00),
     (57, 26, '2026-09-20', 14200.00),
     (48, 5, '2026-09-26', 9700.00),
-    (43, 25, '2026-11-01', 15300.00);
+    (43, 25, '2026-11-01', 15300.00),
+    (88, 35, '2026-03-28', 12700.00),
+    (85, 34, '2026-04-04', 6300.00),
+    (76, 33, '2026-04-29', 21300.00),
+    (72, 39, '2026-05-02', 19200.00),
+    (70, 38, '2026-05-25', 13900.00),
+    (83, 36, '2026-05-25', 16400.00),
+    (91, 13, '2026-06-05', 18500.00),
+    (81, 18, '2026-06-07', 6500.00),
+    (71, 6, '2026-06-09', 4100.00),
+    (75, 8, '2026-06-24', 13200.00),
+    (87, 31, '2026-07-07', 12400.00),
+    (86, 40, '2026-07-22', 9500.00),
+    (74, 11, '2026-07-25', 9000.00),
+    (66, 16, '2026-07-27', 21900.00),
+    (78, 30, '2026-08-07', 9400.00),
+    (64, 21, '2026-08-12', 13800.00),
+    (67, 4, '2026-08-13', 5300.00),
+    (90, 32, '2026-08-22', 18400.00),
+    (63, 41, '2026-08-25', 8800.00),
+    (77, 28, '2026-08-29', 22900.00),
+    (68, 27, '2026-09-09', 10900.00),
+    (61, 23, '2026-09-22', 10000.00),
+    (62, 29, '2026-10-15', 9400.00),
+    (89, 37, '2026-11-02', 22900.00);
 
